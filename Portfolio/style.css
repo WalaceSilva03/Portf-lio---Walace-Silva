@@ -32,21 +32,34 @@ body::before{
 }
 
 /* NAV */
-.navegation{
+.navegation {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem;
-    background: rgba(82,82,82,0.8);
+    background: rgba(82, 82, 82, 0.8);
     z-index: 100;
 }
 
-.menu{
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.menu {
+    justify-self: center;
+
     display: flex;
-    justify-content: center;
     gap: 3rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 
 .objectsMenu{
     color: white;
@@ -333,7 +346,8 @@ body::before{
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-.logo{
+.logo {
+    justify-self: start;
     font-size: 1.2rem;
     font-weight: 600;
     color: white;
