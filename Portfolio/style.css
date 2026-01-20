@@ -38,6 +38,8 @@ body::before{
     width: 100%;
     background: rgba(82, 82, 82, 0.8);
     z-index: 100;
+
+    
 }
 
 .nav-content {
@@ -190,10 +192,10 @@ body::before{
 }
 
 .projectImage{
-    width: 451px;
-    height: 525px;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-    image-rendering: auto;
+    display: block;
 }
 
 .box-textProject{
@@ -397,4 +399,37 @@ body::before{
     background: linear-gradient(90deg, yellow, orange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.menu-toggle{
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+
+    .menu{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        background: rgba(0,0,0,0.95);
+        padding: 2rem 0;
+
+        display: none;
+    }
+
+    .menu.active{
+        display: flex;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
 }

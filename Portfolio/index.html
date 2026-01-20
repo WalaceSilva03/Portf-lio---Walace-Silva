@@ -9,13 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
 
     <nav class="navegation">
+
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <div class="nav-content">
             <h1 class="logo">
                 Walace <span class="gradient-text">Silva</span>
@@ -135,9 +141,11 @@
         <h2 class="AboutTitle">Sobre Mim</h2>
         <div class="AboutBox">
             <p class="AboutText">
-                Sou formado em Análise e Desenvolvimento de Sistemas pela FATEC Rubens Lara, com foco em back-end utilizando Java e Spring Boot. 
-                Tenho experiência em front-end com JavaScript, HTML, CSS e Bootstrap, desenvolvendo interfaces responsivas e funcionais. 
-                Busco evoluir como desenvolvedor full stack, criando aplicações modernas e eficientes. 
+                Sou formado em Análise e Desenvolvimento de Sistemas pela FATEC Rubens Lara, com foco em back-end
+                utilizando Java e Spring Boot.
+                Tenho experiência em front-end com JavaScript, HTML, CSS e Bootstrap, desenvolvendo interfaces
+                responsivas e funcionais.
+                Busco evoluir como desenvolvedor full stack, criando aplicações modernas e eficientes.
                 Neste portfólio, apresento alguns dos meus principais projetos.
             </p>
         </div>
@@ -161,13 +169,9 @@
                 <img src="./img/PetCadastro.png" alt="Cadastro de Pet" class="projectImage">
                 <div class="box-textProject">
                     <h3 class="title-project">Cadastro de Pet</h3>
-                    <p class="project-info">Projeto desenvolvido com foco em estudos práticos de desenvolvimento full
-                        stack, utilizando Java e Spring Boot no back-end para criação de uma API REST, com persistência
-                        de dados em banco SQL. No front-end, foi utilizado JavaScript puro para consumo da API e
-                        manipulação dinâmica da interface. O projeto também envolveu o uso de Docker para padronização
-                        do ambiente e facilitação do deploy,
-                        proporcionando uma experiência completa de integração entre back-end, front-end e banco de
-                        dados.</p>
+                    <p class="project-info">Programa de cadastro de pets, que permite ao usuário registrar
+                        fotos e informações dos seus animais,
+                        transformando o cuidado e o acompanhamento deles em uma experiência divertida e prática.</p>
                 </div>
             </div>
         </div>
@@ -226,6 +230,13 @@
         });
 
     });
+
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
 </script>
 
 </html>
