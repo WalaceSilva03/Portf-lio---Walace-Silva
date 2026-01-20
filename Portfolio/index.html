@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio | Walace Silva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <nav class="navegation">
+        <div class="nav-content">
+            <h1 class="logo">
+                Walace <span class="gradient-text">Silva</span>
+            </h1>
+
+            <ul class="menu">
+                <li><a class="objectsMenu" href="#Begin">Início</a></li>
+                <li><a class="objectsMenu" href="#AboutMe">Sobre</a></li>
+                <li><a class="objectsMenu" href="#Projects">Projetos</a></li>
+                <li><a class="objectsMenu" href="#card">Skills</a></li>
+                <li><a class="objectsMenu" href="#Contact">Contato</a></li>
+            </ul>
+
+            <div class="nav-spacer"></div>
+        </div>
+    </nav>
+
+    <main id="Begin" class="header">
+
+        <div class="title-container">
+            <h1 class="Title">Walace Silva</h1>
+            <p class="Subtitle">Desenvolvedor Full Stack</p>
+        </div>
+
+        <section class="cards-Conteiner">
+
+            <!-- HARD SKILLS -->
+            <div class="card">
+                <h2>Hard Skills</h2>
+
+                <div class="skills-grid">
+
+                    <div class="skill-item">
+                        <i class="fa-brands fa-java"></i>
+                        <h3>Java</h3>
+                        <p>Desenvolvimento backend com foco em APIs, orientação a objetos e boas práticas.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fa-solid fa-leaf"></i>
+                        <h3>Spring Boot</h3>
+                        <p>Criação de APIs REST, segurança, JPA/Hibernate e arquitetura em camadas.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fa-brands fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <p>Criação de interfaces dinâmicas e integração com APIs REST.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fa-brands fa-node-js"></i>
+                        <h3>Node.js</h3>
+                        <p>Backend escalável utilizando Express e arquitetura MVC.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>MySQL</h3>
+                        <p>Modelagem de dados, consultas SQL e integração com aplicações backend.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <h3>Bootstrap</h3>
+                        <p>Estilização rápida e responsiva com componentes prontos e grid system.</p>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+            <!-- SOFT SKILLS -->
+            <div class="card">
+                <h2>Soft Skills</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fa-solid fa-comments"></i>
+                        <h3>Comunicação</h3>
+                        <p>Capacidade de transmitir ideias técnicas de forma clara e objetiva.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fa-solid fa-people-group"></i>
+                        <h3>Trabalho em Equipe</h3>
+                        <p>Colaboração eficiente em times multidisciplinares.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fa-solid fa-brain"></i>
+                        <h3>Pensamento Crítico</h3>
+                        <p>Análise de problemas e tomada de decisões assertivas.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h3>Proatividade</h3>
+                        <p>Iniciativa para resolver problemas e propor melhorias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <a href="./cvv/WalaceJoseSIlva2 (1).pdf" download class="btn-cv">
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>
+
+    </main>
+
+    <section id="AboutMe" class="AboutMe">
+        <h2 class="AboutTitle">Sobre Mim</h2>
+        <div class="AboutBox">
+            <p class="AboutText">
+                Sou formado em análise e Desenvolvimento de Sistemas na Fatec Rubens Lara minhas teclogias principais
+                são para back-end
+                como Java e SpringBoot, no front-end, já utilizei linguagens puras, como e também Bootstrap.
+                Busco me desenvolver como programador full stack com aplicações modernas e eficientes. Nesse portfólio
+                está exposto minhas principais aplicações.
+            </p>
+        </div>
+    </section>
+
+    <section class="Projects">
+        <h2 id="Projects" class="project-title">Projetos</h2>
+
+        <div class="ProjectBox">
+            <div class="projects-cards">
+                <img src="./img/HoqueiBrasil.webp" alt="Hóquei Brasil" class="projectImage">
+                <div class="box-textProject">
+                    <h3 class="title-project">Hóquei Brasil</h3>
+                    <p class="project-info">Projeto desenvolvido com o objetivo de modernizar o site institucional da
+                        Confederação Brasileira de Hóquei de Quadra (CBHP), promovendo a visibilidade e popularização da
+                        modalidade no Brasil por meio de uma interface moderna, responsiva e acessível.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <h2 id="Contact" class="Contact-title">Entre em Contato</h2>
+
+        <form id="contactForm" class="contactForm">
+            <div class="group-Form">
+                <input type="text" placeholder="Nome" class="field-Form" id="name" required>
+            </div>
+
+            <div class="group-Form">
+                <input type="email" name="user_email" class="field-Form" placeholder="Seu Email" required>
+            </div>
+
+            <div class="group-Form">
+                <textarea placeholder="Envie sua mensagem" class="field-Form" rows="6" id="text" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-contact">Enviar</button>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="email.js"></script>
+</body>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        (function () {
+            emailjs.init("-j8dVsotbeSeoFRaz");
+        })();
+
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm(
+                "service_4zpzqfp",
+                "template_j39x18j",
+                this
+            ).then(
+                function () {
+                    alert("E-mail enviado com sucesso!");
+                    form.reset();
+                },
+                function (error) {
+                    alert("Falha ao enviar: " + error.text);
+                }
+            );
+        });
+
+    });
+</script>
+
+</html>

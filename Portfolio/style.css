@@ -1,0 +1,386 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* BACKGROUND ESPAÇO */
+body{
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    color: white;
+    overflow-x: hidden;
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(1px 1px at 100px 150px, white, transparent),
+        radial-gradient(1px 1px at 200px 80px, white, transparent),
+        radial-gradient(2px 2px at 300px 200px, white, transparent),
+        radial-gradient(1px 1px at 400px 100px, white, transparent);
+    background-size: 500px 500px;
+    z-index: -1;
+}
+
+/* NAV */
+.navegation{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(82,82,82,0.8);
+    z-index: 100;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+}
+
+.objectsMenu{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.objectsMenu::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, yellow, black);
+    transition: width .4s;
+}
+
+.objectsMenu:hover::after{
+    width: 100%;
+}
+
+/* HEADER */
+.header{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-container{
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.Title{
+    font-size: 2.5rem;
+}
+
+.Subtitle{
+    font-size: 1.3rem;
+    opacity: .8;
+}
+
+/* CARDS */
+.cards-Conteiner{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid gray;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 420px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2{
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* ABOUT */
+.AboutMe{
+    padding: 6rem 2rem;
+}
+
+.AboutTitle{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.AboutBox{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.AboutText{
+    text-align: center;
+}
+
+/* PROJECTS */
+.projects{
+    padding: 6rem 2rem;
+}
+
+.project-title{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ProjectBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,450px));
+    gap: 2rem;
+    justify-content: center;
+    margin: auto;
+}
+
+.projects-cards{
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.projects-cards:hover{
+    transform: translateY(-8px);
+}
+
+.projectImage{
+    width: 451px;
+    height: 525px;
+    object-fit: cover;
+    image-rendering: auto;
+}
+
+.box-textProject{
+    padding: 1.5rem;
+}
+
+/* CONTACTS */
+.contacts{
+    padding: 6rem 2rem;
+}
+
+.Contact-title{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contactForm{
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.group-Form{
+    margin-bottom: 1.5rem;
+}
+
+.field-Form{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    outline: none;
+}
+
+.field-Form::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+.btn-contact{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, yellow, orange);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.skills-icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.skills-icons i{
+    font-size: 2.5rem;
+    color: white;
+    transition: transform .3s ease, color .3s ease;
+    cursor: pointer;
+}
+
+.skills-icons i:hover{
+    transform: scale(1.2);
+    color: yellow;
+}
+
+.soft-skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.soft-skill{
+    text-align: center;
+    padding: 1rem;
+}
+
+.soft-skill i{
+    font-size: 2.2rem;
+    color: yellow;
+    margin-bottom: .5rem;
+}
+
+.skill-item h3{
+    font-size: 1.1rem;
+    margin-bottom: .3rem;
+}
+
+.soft-skill p{
+    font-size: .9rem;
+    opacity: 0.85;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item{
+    text-align: center;
+}
+
+.skill-item i{
+    font-size: 2.2rem;
+    color: yellow;
+    margin-bottom: .5rem;
+}
+
+.skill-item h3{
+    font-size: 1.1rem;
+    margin-bottom: .3rem;
+}
+
+.skill-item p{
+    font-size: .9rem;
+    opacity: 0.85;
+}
+
+.btn-cv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    margin: 2rem auto 0 auto;
+    
+    padding: .8rem 1.5rem;
+    border-radius: 30px;
+    background: linear-gradient(90deg, yellow, orange);
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.btn-cv:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.logo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Gradiente SOMENTE no Silva */
+.gradient-text{
+    background: linear-gradient(90deg, yellow, orange);
+    -webkit-text-fill-color: transparent;
+}
+
+.navegation{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(82, 82, 82, 0.8);
+    z-index: 100;
+}
+
+.nav-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+}
+
+/* Menu continua centralizado */
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+/* Gradiente */
+.gradient-text{
+    background: linear-gradient(90deg, yellow, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
