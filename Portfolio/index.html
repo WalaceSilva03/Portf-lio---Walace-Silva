@@ -239,7 +239,11 @@
         link.addEventListener('click', () => {
             menu.classList.remove('active');
         });
-    }); 
+    });
+
+    setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth' });
+    }, 200);
 </script>
 
 </html>
