@@ -1,23 +1,23 @@
 /* RESET */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 /* BACKGROUND ESPAÇO */
-body{
+body {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     color: white;
     overflow-x: hidden;
 }
 
-body::before{
+body::before {
     content: '';
     position: fixed;
     inset: 0;
@@ -39,17 +39,17 @@ body::before{
     background: rgba(82, 82, 82, 0.8);
     z-index: 100;
 
-    
+
 }
 
 .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 2rem;
-
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
 }
 
 .menu {
@@ -63,14 +63,14 @@ body::before{
 }
 
 
-.objectsMenu{
+.objectsMenu {
     color: white;
     text-decoration: none;
     position: relative;
     padding: 0.5rem 0;
 }
 
-.objectsMenu::after{
+.objectsMenu::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -81,34 +81,34 @@ body::before{
     transition: width .4s;
 }
 
-.objectsMenu:hover::after{
+.objectsMenu:hover::after {
     width: 100%;
 }
 
 /* HEADER */
-.header{
+.header {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.title-container{
+.title-container {
     margin-top: 6rem;
     text-align: center;
 }
 
-.Title{
+.Title {
     font-size: 2.5rem;
 }
 
-.Subtitle{
+.Subtitle {
     font-size: 1.3rem;
     opacity: .8;
 }
 
 /* CARDS */
-.cards-Conteiner{
+.cards-Conteiner {
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -117,7 +117,7 @@ body::before{
     flex-wrap: wrap;
 }
 
-.card{
+.card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border: 1px solid gray;
@@ -129,119 +129,119 @@ body::before{
     flex-direction: column;
 }
 
-.card h2{
+.card h2 {
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
 }
 
 /* ABOUT */
-.AboutMe{
+.AboutMe {
     padding: 6rem 2rem;
 }
 
-.AboutTitle{
+.AboutTitle {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.AboutBox{
+.AboutBox {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 16px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.AboutText{
+.AboutText {
     text-align: center;
 }
 
 /* PROJECTS */
-.projects{
+.projects {
     padding: 6rem 2rem;
 }
 
-.project-title{
+.project-title {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.ProjectBox{
+.ProjectBox {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,450px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
     gap: 2rem;
     justify-content: center;
     margin: auto;
 }
 
-.projects-cards{
+.projects-cards {
     border-radius: 16px;
     overflow: hidden;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: transform .3s;
     cursor: pointer;
 }
 
-.projects-cards:hover{
+.projects-cards:hover {
     transform: translateY(-8px);
 }
 
-.projectImage{
+.projectImage {
     width: 100%;
     height: 250px;
     object-fit: cover;
     display: block;
 }
 
-.box-textProject{
+.box-textProject {
     padding: 1.5rem;
 }
 
 /* CONTACTS */
-.contacts{
+.contacts {
     padding: 6rem 2rem;
 }
 
-.Contact-title{
+.Contact-title {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.contactForm{
+.contactForm {
     max-width: 600px;
     margin: auto;
     padding: 2rem;
     border-radius: 16px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.group-Form{
+.group-Form {
     margin-bottom: 1.5rem;
 }
 
-.field-Form{
+.field-Form {
     width: 100%;
     padding: 1rem;
     border-radius: 8px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
     outline: none;
 }
 
-.field-Form::placeholder{
-    color: rgba(255,255,255,0.6);
+.field-Form::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.btn-contact{
+.btn-contact {
     width: 100%;
     padding: 1rem;
     border: none;
@@ -251,7 +251,7 @@ body::before{
     cursor: pointer;
 }
 
-.skills-icons{
+.skills-icons {
     display: flex;
     flex-wrap: wrap;
     gap: 1.2rem;
@@ -259,80 +259,80 @@ body::before{
     margin-top: 1.5rem;
 }
 
-.skills-icons i{
+.skills-icons i {
     font-size: 2.5rem;
     color: white;
     transition: transform .3s ease, color .3s ease;
     cursor: pointer;
 }
 
-.skills-icons i:hover{
+.skills-icons i:hover {
     transform: scale(1.2);
     color: yellow;
 }
 
-.soft-skills{
+.soft-skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
 
-.soft-skill{
+.soft-skill {
     text-align: center;
     padding: 1rem;
 }
 
-.soft-skill i{
+.soft-skill i {
     font-size: 2.2rem;
     color: yellow;
     margin-bottom: .5rem;
 }
 
-.skill-item h3{
+.skill-item h3 {
     font-size: 1.1rem;
     margin-bottom: .3rem;
 }
 
-.soft-skill p{
+.soft-skill p {
     font-size: .9rem;
     opacity: 0.85;
 }
 
-.skills-grid{
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
 }
 
-.skill-item{
+.skill-item {
     text-align: center;
 }
 
-.skill-item i{
+.skill-item i {
     font-size: 2.2rem;
     color: yellow;
     margin-bottom: .5rem;
 }
 
-.skill-item h3{
+.skill-item h3 {
     font-size: 1.1rem;
     margin-bottom: .3rem;
 }
 
-.skill-item p{
+.skill-item p {
     font-size: .9rem;
     opacity: 0.85;
 }
 
-.btn-cv{
+.btn-cv {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
 
     margin: 2rem auto 0 auto;
-    
+
     padding: .8rem 1.5rem;
     border-radius: 30px;
     background: linear-gradient(90deg, yellow, orange);
@@ -343,25 +343,24 @@ body::before{
     transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.btn-cv:hover{
+.btn-cv:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
-    justify-self: start;
     font-size: 1.2rem;
     font-weight: 600;
     color: white;
 }
 
 /* Gradiente SOMENTE no Silva */
-.gradient-text{
+.gradient-text {
     background: linear-gradient(90deg, yellow, orange);
     -webkit-text-fill-color: transparent;
 }
 
-.navegation{
+.navegation {
     position: fixed;
     top: 0;
     width: 100%;
@@ -369,18 +368,10 @@ body::before{
     z-index: 100;
 }
 
-.nav-content{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+.nav-content {}
 
 /* Logo */
-.logo{
+.logo {
     font-size: 1.2rem;
     font-weight: 600;
     color: white;
@@ -388,48 +379,46 @@ body::before{
 }
 
 /* Menu continua centralizado */
-.menu{
+.menu {
     display: flex;
-    list-style: none;
     gap: 3rem;
+    list-style: none;
 }
 
 /* Gradiente */
-.gradient-text{
+.gradient-text {
     background: linear-gradient(90deg, yellow, orange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.menu-toggle{
+.menu-toggle {
     display: none;
     font-size: 1.8rem;
     cursor: pointer;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-    .menu{
+    .menu {
+        display: none;
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: 0;
         width: 100%;
 
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
-
-        background: rgba(0,0,0,0.95);
+        background: rgba(0, 0, 0, 0.95);
         padding: 2rem 0;
-
-        display: none;
     }
 
-    .menu.active{
+    .menu.active {
         display: flex;
     }
 
-    .menu-toggle{
+    .menu-toggle {
         display: block;
     }
 }

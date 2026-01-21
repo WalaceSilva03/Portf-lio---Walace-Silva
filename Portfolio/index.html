@@ -17,16 +17,11 @@
 <body>
 
     <nav class="navegation">
-
-        <div class="menu-toggle">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-
         <div class="nav-content">
-            <h1 class="logo">
-                Walace <span class="gradient-text">Silva</span>
-            </h1>
-
+            <h1 class="logo">Walace <span class="gradient-text">Silva</span></h1>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <ul class="menu">
                 <li><a class="objectsMenu" href="#Begin">Início</a></li>
                 <li><a class="objectsMenu" href="#AboutMe">Sobre</a></li>
@@ -235,8 +230,15 @@
     const menu = document.querySelector('.menu');
 
     toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
+        menu.classList.toggle('acticve');
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.toggle('remove');
+        });
+    });    
+
 </script>
 
 </html>
