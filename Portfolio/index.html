@@ -235,10 +235,9 @@
 
     menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            menu.classList.toggle('remove');
+            menu.classList.remove('active');
         });
-    });    
-
+    }); 
 </script>
 
 </html>
