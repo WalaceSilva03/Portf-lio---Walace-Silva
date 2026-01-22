@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 /* BACKGROUND ESPAÇO */
@@ -31,6 +32,21 @@ body::before {
     z-index: -1;
 }
 
+.section {
+    min-height: 100vh;
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+
+.pageName {
+    flex-direction: column;
+    text-align: center;
+
+}
+
 /* NAV */
 .navegation {
     position: fixed;
@@ -38,8 +54,44 @@ body::before {
     width: 100%;
     background: rgba(82, 82, 82, 0.8);
     z-index: 100;
+}
 
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90vw;
+    height: 90vw;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
 
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #009578;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
 }
 
 .nav-content {
@@ -85,21 +137,22 @@ body::before {
     width: 100%;
 }
 
-/* HEADER */
+
 .header {
     min-height: 100vh;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
 .title-container {
-    margin-top: 6rem;
     text-align: center;
+    padding: 2rem;
 }
 
 .Title {
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 
 .Subtitle {
@@ -108,14 +161,6 @@ body::before {
 }
 
 /* CARDS */
-.cards-Conteiner {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch;
-    padding: 4rem 2rem;
-    flex-wrap: wrap;
-}
 
 .card {
     background: rgba(255, 255, 255, 0.15);
@@ -134,9 +179,9 @@ body::before {
     font-size: 1.8rem;
 }
 
-/* ABOUT */
-.AboutMe {
-    padding: 6rem 2rem;
+.aboutmePage {
+    flex-direction: column;
+    align-items: center;
 }
 
 .AboutTitle {
@@ -160,31 +205,38 @@ body::before {
 }
 
 /* PROJECTS */
-.projects {
-    padding: 6rem 2rem;
+.projectsPage {
+    flex-direction: column;
+    align-items: center;
 }
 
 .project-title {
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 .ProjectBox {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+    display: flex;
     gap: 2rem;
     justify-content: center;
-    margin: auto;
+    align-items: flex-start;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .projects-cards {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid gray;
     border-radius: 16px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: transform .3s;
-    cursor: pointer;
+    padding: 2rem;
+    width: 420px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-cards:hover {
@@ -204,7 +256,14 @@ body::before {
 
 /* CONTACTS */
 .contacts {
-    padding: 6rem 2rem;
+    padding: 5rem 2rem;
+}
+
+.contactsPage{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .Contact-title {
@@ -213,7 +272,7 @@ body::before {
     margin-bottom: 2rem;
 }
 
-.contactForm {
+.contactBox {
     max-width: 600px;
     margin: auto;
     padding: 2rem;
@@ -229,6 +288,7 @@ body::before {
 
 .field-Form {
     width: 100%;
+    height: 100%;
     padding: 1rem;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.05);
@@ -368,8 +428,6 @@ body::before {
     z-index: 100;
 }
 
-.nav-content {}
-
 /* Logo */
 .logo {
     font-size: 1.2rem;
@@ -406,7 +464,7 @@ body::before {
         top: 60px;
         left: 0;
         width: 100%;
-        
+
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
@@ -416,10 +474,10 @@ body::before {
         opacity: 0;
         pointer-events: none;
 
-        transition: 
+        transition:
             transform 0.3 ease,
             opacity 0.3 ease;
-        
+
     }
 
     .menu.active {
@@ -433,5 +491,5 @@ body::before {
         display: block;
     }
 
-    
+
 }
