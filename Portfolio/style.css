@@ -32,6 +32,14 @@ body::before {
     z-index: -1;
 }
 
+.homeShortcuts {
+    display: flex;
+    grid-area: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
 .section {
     min-height: 100vh;
     padding: 6rem 2rem;
@@ -158,29 +166,6 @@ body::before {
 .Subtitle {
     font-size: 1.3rem;
     opacity: .8;
-}
-
-/* CARDS */
-
-.card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid gray;
-    border-radius: 16px;
-    padding: 2rem;
-    width: 100%;
-    max-width: 420px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    gap: 2rem;
-}
-
-.card h2 {
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
 }
 
 .aboutmePage {
@@ -318,87 +303,15 @@ body::before {
     cursor: pointer;
 }
 
-.skills-icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    justify-content: center;
-    margin-top: 1.5rem;
-}
-
-.skills-icons i {
-    font-size: 2.5rem;
-    color: white;
-    transition: transform .3s ease, color .3s ease;
-    cursor: pointer;
-}
-
-.skills-icons i:hover {
-    transform: scale(1.2);
-    color: yellow;
-}
-
-.soft-skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.soft-skill {
-    text-align: center;
-    padding: 1rem;
-}
-
-.soft-skill i {
-    font-size: 2.2rem;
-    color: yellow;
-    margin-bottom: .5rem;
-}
-
-.skill-item h3 {
-    font-size: 1.1rem;
-    margin-bottom: .3rem;
-}
-
-.soft-skill p {
-    font-size: .9rem;
-    opacity: 0.85;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-item {
-    text-align: center;
-}
-
-.skill-item i {
-    font-size: 2.2rem;
-    color: yellow;
-    margin-bottom: .5rem;
-}
-
-.skill-item h3 {
-    font-size: 1.1rem;
-    margin-bottom: .3rem;
-}
-
-.skill-item p {
-    font-size: .9rem;
-    opacity: 0.85;
-}
 
 .btn-cv {
-    display: flex;
+    width: 180px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
 
-    margin: 2rem auto 0 auto;
+    margin: 2rem;
 
     padding: .8rem 1.5rem;
     border-radius: 30px;
@@ -498,9 +411,9 @@ body::before {
         display: block;
     }
 
-    .skills-grid{
-        flex-direction: column;
-        align-items: center;
+    .btn-cv{
+        width: 100%;
+        justify-content: center;
     }
 
 

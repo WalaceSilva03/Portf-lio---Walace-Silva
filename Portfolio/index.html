@@ -27,7 +27,6 @@
                 </div>
                 <ul class="menu">
                     <li><a class="objectsMenu" href="#Begin">Início</a></li>
-                    <li><a class="objectsMenu" href="#skills">Skills</a></li>
                     <li><a class="objectsMenu" href="#AboutMe">Sobre</a></li>
                     <li><a class="objectsMenu" href="#projects">Projetos</a></li>
                     <li><a class="objectsMenu" href="#contacts">Contato</a></li>
@@ -36,90 +35,27 @@
         </nav>
 
         <section id="firstPage" class="section pageName">
+
+            <nav class="navegationSubMenu">
+                <div class="homeShortcuts">
+                        <a href="#projects" class="btn-cv">
+                            <i class="fa-solid fa-download"></i> Projetos
+                        </a>
+                        <a href="#contacts" class="btn-cv">
+                            <i class="fa-solid fa-envelope"></i> Entre em contato
+                        </a>
+                        <a href="./cvv/CurriculoWalaceSilva.pdf" download class="btn-cv">
+                            <i class="fa-solid fa-file-lines"></i> Meu currículo
+                        </a>
+                </div>
+            </nav>
+
             <div class="title-container">
                 <h1 class="title">Walace <span class="gradient-text">Silva</span></h1>
                 <p class="Subtitle">Desenvolvedor Full Stack</p>
+
             </div>
         </section>
-
-
-        <section id="skills" class="section">
-            <!-- HARD SKILLS -->
-            <div class="card">
-                <h2>Hard Skills</h2>
-
-                <div class="skills-grid">
-
-                    <div class="skill-item">
-                        <i class="fa-brands fa-java"></i>
-                        <h3>Java</h3>
-                        <p>Desenvolvimento backend com foco em APIs, orientação a objetos e boas práticas.</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <i class="fa-solid fa-leaf"></i>
-                        <h3>Spring Boot</h3>
-                        <p>Criação de APIs REST, segurança, JPA/Hibernate e arquitetura em camadas.</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <i class="fa-brands fa-docker"></i>
-                        <h3>Docker</h3>
-                        <p>Containerização de aplicações, padronização de ambientes e suporte ao deploy.</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <i class="fa-brands fa-js"></i>
-                        <h3>JavaScript</h3>
-                        <p>Criação de interfaces dinâmicas e integração com APIs REST.</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <i class="fa-solid fa-database"></i>
-                        <h3>MySQL</h3>
-                        <p>Modelagem de dados, consultas SQL e integração com aplicações backend.</p>
-                    </div>
-
-                </div>
-            </div>
-            </div>
-
-            <!-- SOFT SKILLS -->
-            <div class="card">
-                <h2>Soft Skills</h2>
-
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <i class="fa-solid fa-comments"></i>
-                        <h3>Comunicação</h3>
-                        <p>Capacidade de transmitir ideias técnicas de forma clara e objetiva.</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <i class="fa-solid fa-people-group"></i>
-                        <h3>Trabalho em Equipe</h3>
-                        <p>Colaboração eficiente em times multidisciplinares.</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <i class="fa-solid fa-brain"></i>
-                        <h3>Pensamento Crítico</h3>
-                        <p>Análise de problemas e tomada de decisões assertivas.</p>
-                    </div>
-
-                    <div class="skill-item">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <h3>Proatividade</h3>
-                        <p>Iniciativa para resolver problemas e propor melhorias.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <a href="./cvv/CurriculoWalaceSilva.pdf" download class="btn-cv">
-            <i class="fa-solid fa-download"></i> Download CV
-        </a>
 
     </main>
 
@@ -139,7 +75,7 @@
 
     <section id="projects" class="section projectsPage">
         <h2 class="project-title">Projetos</h2>
-        
+
         <div class="ProjectBox">
             <div class="projects-cards">
                 <img src="./img/HoqueiBrasil.webp" alt="Hóquei Brasil" class="projectImage">
@@ -163,9 +99,9 @@
         </div>
     </section>
 
-    
+
     <section id="contacts" class="section contactsPage">
-    <h2 id="contactTitle" class="Contact-title">Entre em Contato</h2>
+        <h2 id="contactTitle" class="Contact-title">Entre em Contato</h2>
         <form id="contactBox" class="contactBox">
             <div class="group-Form">
                 <input type="text" placeholder="Nome" class="field-Form" id="name" required>
