@@ -498,7 +498,7 @@ body::before {
         display: block;
     }
 
-    .card{
+    .skills-grid{
         flex-direction: column;
         align-items: center;
     }
