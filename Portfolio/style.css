@@ -226,7 +226,6 @@ body::before {
     max-width: 420px;
     text-align: center;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: stretch;
 }
@@ -306,6 +305,7 @@ body::before {
 
 .btn-cv {
     width: 180px;
+    padding: 12px 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -414,6 +414,10 @@ body::before {
     .btn-cv{
         width: 100%;
         justify-content: center;
+    }
+
+    .ProjectBox{
+        flex-direction: column;
     }
 
 
